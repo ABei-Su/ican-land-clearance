@@ -1,0 +1,31 @@
+# Changelog
+
+## Unreleased
+- Propagate local rehearsal child failures, signal exits and timeouts after saving results; add four script-level regressions. Submission files are unchanged.
+- Rehearsed the current uploaded-format archive and launcher in a fresh Linux workspace: run 4331ee791c7c completed in 221.9 simulation seconds. Preserve each rehearsal in a separate timestamped directory and reuse the local clock-restoring lock wrapper.
+- Preserve the original abort and finish bounded stop attempts when callbacks fail again during cancellation or cleanup; log cleanup errors and close the run log. Add fault-injected adapter regressions.
+- Reject non-finite odometry velocity before renewing the movement lease; use the existing fail-closed mission path. Add actual ROS callback regressions and velocity-input safety coverage.
+- Resolve relative ICAN_WORKSPACE before changing directories so the built overlay can be sourced; strengthen launcher tests to check actual overlay existence.
+- Support the official guide scripts/ launcher location as well as workspace root and explicit ICAN_WORKSPACE; add five Bash entry-point regressions. Simulator and referee remain platform-owned.
+- Validate delivered archive and launcher against current source before extraction and finalization; reject duplicate/noncanonical paths and symlinks, and prove clean-build imports originate in the temporary install. Added six archive-integrity regressions.
+- Isolated local WSL time synchronization during trials and restored its prior state on exit; fixed SIGTERM cleanup ordering with a real delayed-child regression. 49 tests pass; competition timeouts and interfaces are unchanged.
+- Completed optimized runs c25521024aa3 and 7a2d46506361; refreshed the continuous video and six-page report from c25521024aa3.
+- Cached marker orientations and batched bit agreement without changing recognition thresholds; recorded-image benchmark median 1.927 ms to 1.161 ms with identical outputs.
+- Added rotation, bit-noise, tie-ranking and immutable-template regressions; 40 tests pass.
+- Verified 37 tests, added missing-runtime diagnostics and native Gazebo contact evidence; latest video run records four expected target contacts, with correct wheel ID 2.
+- Persisted the local WSL camera receive-buffer fix and added a startup precheck; official platform configuration is unchanged.
+- Updated submission video and reports from the verified contact run; official scoring remains unverified.
+- Produced continuous MP4, six-page PDF/DOCX and a clean-build-verified source archive.
+- Completed default, seed-17 and seed-29 full flows; official scoring and some shot contacts remain unverified.
+- Fixed stale-odometry firing authorization with pure and ROS regressions; 32 unit tests pass.
+- Added bounded visual rotation recovery and the missing PGM map to archive packaging.
+- Added sequential mission adapter, remapped Nav2 launch and portable source packaging script; complete-run validation remains pending.
+- Added final-approach timeout diagnostics and odometry freshness leases for command output.
+- Added real ring and wheel image regressions; cell-based marker decoding separates small codes from dark walls.
+- Added validated observation-route geometry and bounded final-approach controller (integration stability under investigation).
+- Added eight-marker recognition with rotation, multi-marker and unknown-image tests.
+- Added ROS velocity gate and control-heartbeat expiry stop, plus isolated transport test.
+- Added ROS package metadata and Linux-cache build helper for WSL filesystem compatibility.
+- Added deterministic four-point task core, generation tokens and fail-closed transitions.
+- Added public-template SIFT ground recognition and perspective/ambiguity tests.
+- Added bounded local observation experiment; not a complete competition mission.
